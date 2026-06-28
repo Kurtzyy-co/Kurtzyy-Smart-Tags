@@ -1,0 +1,31 @@
+{
+  "entities": {
+    "TagProfile": {
+      "title": "TagProfile",
+      "description": "Smart Tag child profile stored in Firestore.",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "childName": { "type": "string" },
+        "childPhoto": { "type": "string" },
+        "contacts": { "type": "array" },
+        "tagColor": { "type": "string" },
+        "bloodGroup": { "type": "string" },
+        "age": { "type": "string" },
+        "dob": { "type": "string" },
+        "engravingText": { "type": "string" },
+        "adEmail": { "type": "string" },
+        "adWhatsapp": { "type": "string" },
+        "adInstagram": { "type": "string" },
+        "userId": { "type": "string" }
+      },
+      "required": ["id", "childName", "contacts", "tagColor"]
+    }
+  },
+  "firestore": {
+    "/profiles/{profileId}": {
+      "schema": "TagProfile",
+      "description": "User created child profiles associated with a smart tag"
+    }
+  }
+}
