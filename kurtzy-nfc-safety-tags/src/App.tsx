@@ -406,7 +406,9 @@ export default function App() {
   };
 
   const activeColors = getColorClasses(profile.tagColor);
-
+  if (isLoading) {
+    return <SkeletonScreen isAdmin={isAdmin} />;
+  }
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100 flex flex-col font-sans relative overflow-x-hidden selection:bg-blue-600/30 selection:text-blue-200">
       {/* Decorative ambient gradients */}
