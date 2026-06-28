@@ -1,3 +1,4 @@
+import SkeletonScreen from './components/SkeletonScreen';
 import React, { useState, useEffect, useRef } from "react";
 import { 
   Phone, 
